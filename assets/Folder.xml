@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<!--
+
+   	[MS-OXCFXICS] Bulk Data Transfer Protocol
+
+ 	@package	sync*gw
+   	@subpackage	Bulk Data Transfer Protocol
+ 	@copyright	(c) 2008 - 2023 Florian Daeumling, Germany. All right reserved
+  	@license 	LGPL-3.0-or-later
+
+-->
+<syncgw>
+
+  <Folder>  
+    <Element>
+      <FolderType/>
+      <Marker T="I" S="4" D="STREAM_MARKER">IncrSyncChg</Marker>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">I4</Type>
+      <PropertyId T="I" S="2" D="PID">AssociatedContentCount</PropertyId>
+      <Value T="I" S="4">0</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">B</Type>
+      <PropertyId T="I" S="2" D="PID">Subfolders</PropertyId>
+      <Pad T="I" S="1">0</Pad>
+      <Value T="B">false</Value>
+	</Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">I4</Type>
+      <PropertyId T="I" S="2" D="PID">InternetArticleNumber</PropertyId>
+      <Value T="I" S="4" C="FolderType=Sent">6</Value>
+      <Value T="I" S="4" C="FolderType=Deleted">7</Value>
+      <Value T="I" S="4" C="FolderType=Outbox">5</Value>
+      <Value T="I" S="4" C="FolderType=Inbox">3</Value>
+      <Value T="I" S="4" C="FolderType=Drafts">4</Value>
+      <Value T="I" S="4" C="FolderType=Calendar">9</Value>
+      <Value T="I" S="4" C="FolderType=Journal">10</Value>
+      <Value T="I" S="4" C="FolderType=Notes">11</Value>
+      <Value T="I" S="4" C="FolderType=Task">12</Value>
+      <Value T="I" S="4" C="FolderType=Contact">8</Value>
+      <Value T="I" S="4" C="FolderType=Spam">16</Value>
+      <Value T="I" S="4" C="FolderType=SyncProblems">24</Value>
+      <Value T="I" S="4" C="FolderType=Config">17</Value>
+      <Value T="I" S="4" C="FolderType=FixContact">13</Value>
+      <Value T="I" S="4" C="FolderType=IMContact">14</Value>
+      <Value T="I" S="4" C="FolderType=GAL">15</Value>
+      <Value T="I" S="4" C="FolderType=Conflicts">25</Value>
+      <Value T="I" S="4" C="FolderType=LocalError">26</Value>
+      <Value T="I" S="4" C="FolderType=ServerError">27</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">S</Type>
+      <PropertyId T="I" S="2" D="PID">DisplayName</PropertyId>
+      <Count T="I" S="4">##name_len</Count>
+      <Value T="S">##name</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">S</Type>
+      <PropertyId T="I" S="2" D="PID">Comment</PropertyId>
+      <Count T="I" S="4">2</Count>
+      <Value T="S"/>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">T</Type>
+      <PropertyId T="I" S="2" D="PID">CreationTime</PropertyId>
+      <Value T="T">##created</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">T</Type>
+      <PropertyId T="I" S="2" D="PID">LastModificationTime</PropertyId>
+      <Value T="T">##modified</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">S</Type>
+      <PropertyId T="I" S="2" D="PID">ContainerClass</PropertyId>
+      <Count T="I" S="4"  C="FolderType=Sent">18</Count>
+      <Value T="S" C="FolderType=Sent">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=Deleted">18</Count>
+      <Value T="S" C="FolderType=Deleted">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=Outbox">18</Count>
+      <Value T="S" C="FolderType=Outbox">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=Inbox">18</Count>
+      <Value T="S" C="FolderType=Inbox">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=Drafts">18</Count>
+      <Value T="S" C="FolderType=Drafts">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=Calendar">32</Count>
+      <Value T="S" C="FolderType=Calendar">IPF.Appointment</Value>
+      <Count T="I" S="4"  C="FolderType=Journal">24</Count>
+      <Value T="S" C="FolderType=Journal">IPF.Journal</Value>
+      <Count T="I" S="4"  C="FolderType=Notes">30</Count>
+      <Value T="S" C="FolderType=Notes">IPF.StickyNote</Value>
+      <Count T="I" S="4"  C="FolderType=Task">18</Count>
+      <Value T="S" C="FolderType=Task">IPF.Task</Value>
+      <Count T="I" S="4"  C="FolderType=Contact">24</Count>
+      <Value T="S" C="FolderType=Contact">IPF.Contact</Value>
+      <Count T="I" S="4"  C="FolderType=Spam">18</Count>
+      <Value T="S" C="FolderType=Spam">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=SyncProblems">18</Count>
+      <Value T="S" C="FolderType=SyncProblems">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=Config">36</Count>
+      <Value T="S" C="FolderType=Config">IPF.Configuration</Value>
+      <Count T="I" S="4"  C="FolderType=FixContact">60</Count>
+      <Value T="S" C="FolderType=FixContact">IPF.Contact.MOC.QuickContacts</Value>
+      <Count T="I" S="4"  C="FolderType=IMContact">60</Count>
+      <Value T="S" C="FolderType=IMContact">IPF.Contact.MOC.ImContactList</Value>
+      <Count T="I" S="4"  C="FolderType=GAL">48</Count>
+      <Value T="S" C="FolderType=GAL">IPF.Contact.GalContacts</Value>
+      <Count T="I" S="4"  C="FolderType=Conflicts">18</Count>
+      <Value T="S" C="FolderType=Conflicts">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=LocalError">18</Count>
+      <Value T="S" C="FolderType=LocalError">IPF.Note</Value>
+      <Count T="I" S="4"  C="FolderType=ServerError">18</Count>
+      <Value T="S" C="FolderType=ServerError">IPF.Note</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">RemindersOnlineEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000001020000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">AdditionalRenEntryIdsEx</PropertyId>
+      <Count T="I" S="4">220</Count>
+      <Value T="H" S="Count">0480320001002e000000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000010100000680320001002e000000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000001d00000a80320001002e000000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000001500000b80320001002e000000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c5657000000000014000000000000</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">T</Type>
+      <PropertyId T="I" S="2" D="PID">HierarchyTime</PropertyId>
+      <Value T="T">##lastsync</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">ChangeKey</PropertyId>
+      <Value>
+        <Count T="I" S="4">22</Count>
+        <GUID T="G" D="GUID">UserFolder</GUID>
+        <GlobalCounter T="H" S="6" C="FolderType=Sent">800000000057</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Deleted">800000000058</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Outbox">800000000059</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Inbox">80000000005a</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Drafts">80000000005b</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Calendar">80000000005c</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Journal">80000000005d</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Notes">80000000005e</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Task">80000000005f</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Contact">800000000060</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=FixContact">000000800000</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Spam">800000000061</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=SyncProblems">800000000062</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=IMContact">000000800000</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=GAL">000000800000</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Conflicts">800000000063</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=LocalError">800000000064</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=ServerError">800000000065</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Config">000000800000</GlobalCounter>
+      </Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">PredecessorChangeList</PropertyId>
+      <Value>
+        <Count T="I" S="4">23</Count>
+        <Tag T="I" S="1">22</Tag>
+        <GUID T="G" D="GUID">UserFolder</GUID>
+        <GlobalCounter T="H" S="6" C="FolderType=Sent">800000000057</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Deleted">800000000058</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Outbox">800000000059</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Inbox">80000000005a</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Drafts">80000000005b</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Calendar">80000000005c</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Journal">80000000005d</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Notes">80000000005e</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Task">80000000005f</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Contact">800000000060</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=FixContact">000000800000</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Spam">800000000061</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=SyncProblems">800000000062</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=IMContact">000000800000</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=GAL">000000800000</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Conflicts">800000000063</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=LocalError">800000000064</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=ServerError">800000000065</GlobalCounter>
+        <GlobalCounter T="H" S="6" C="FolderType=Config">000000800000</GlobalCounter>
+      </Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">I8</Type>
+      <PropertyId T="I" S="2" D="PID">ParentFolderId</PropertyId>
+      <Value T="I" S="8" C="FolderType!Conflicts$FolderType!LocalError$FolderType!ServerError">648518346341351425</Value>
+      <Value T="I" S="8" C="FolderType=Conflicts|FolderType=LocalError|FolderType=ServerError">1801439850948198401</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">B</Type>
+      <PropertyId T="I" S="2" D="PID">AttributeHidden</PropertyId>
+      <Pad T="I" S="1">0</Pad>
+      <Value T="B">false</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">B</Type>
+      <PropertyId T="I" S="2" D="PID">##0x10F5</PropertyId>
+      <Pad T="I" S="1">0</Pad>
+      <Value T="B">false</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">B</Type>
+      <PropertyId T="I" S="2" D="PID">AttributeReadOnly</PropertyId>
+      <Pad T="I" S="1">0</Pad>
+      <Value T="B">false</Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">##0x0E58</PropertyId>
+      <Count T="I" S="4">0</Count>
+      <Value T="H" S="Count"/>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">SourceKey</PropertyId>
+      <Value>
+        <Count T="I" S="4">22</Count>
+        <GUID T="G" D="GUID">UserFolder</GUID>
+        <GlobalCounter T="H" S="6" D="GLOBAL_COUNTER">##folder_id</GlobalCounter>
+      </Value>
+    </Element>
+    <Element>
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">ParentSourceKey</PropertyId>
+      <Value C="FolderType!FixContact$FolderType!IMContact$FolderType!GAL$FolderType!Conflicts$FolderType!LocalError$FolderType!ServerError">
+        <Count T="I" S="4">0</Count>
+        <Value T="H" S="Count"/>
+      </Value>
+      <Value C="FolderType=FixContact|FolderType=IMContact|FolderType=GAL">
+        <Count T="I" S="4">22</Count>
+        <GUID T="G" D="GUID">UserFolder</GUID>
+        <GlobalCounter T="H" S="6" D="GLOBAL_COUNTER">Contact</GlobalCounter>
+      </Value>
+      <Value C="FolderType=Conflicts|FolderType=LocalError|FolderType=ServerError">
+        <Count T="I" S="4">22</Count>
+        <GUID T="G" D="GUID">UserFolder</GUID>
+        <GlobalCounter T="H" S="6" D="GLOBAL_COUNTER">SyncProblems</GlobalCounter>
+      </Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">IpmDraftsEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000000e0000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">IpmContactEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000130000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">IpmAppointmentEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000000f0000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">IpmJournalEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000100000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">IpmNoteEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000110000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">IpmTaskEntryId</PropertyId>
+      <Count T="I" S="4">46</Count>
+      <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000120000</Value>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">M_H</Type>
+      <PropertyId T="I" S="2" D="PID">AdditionalRenEntryIds</PropertyId>
+      <Count T="I" S="4">5</Count>
+      <ValueList>
+      	<Element>
+          <Count T="I" S="4">46</Count>
+          <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000001a0000</Value>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">46</Count>
+          <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000190000</Value>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">46</Count>
+          <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000001b0000</Value>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">46</Count>
+          <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c565700000000001c0000</Value>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">46</Count>
+          <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000170000</Value>
+      	</Element>
+      </ValueList>
+    </Element>
+    <Element C="FolderType=Inbox">
+      <Type T="I" S="2" D="DATA_TYP">M_H</Type>
+      <PropertyId T="I" S="2" D="PID">FreeBusyEntryIds</PropertyId>
+      <Count T="I" S="4">4</Count>
+      <ValueList>
+      	<Element>
+          <Count T="I" S="4">0</Count>
+          <Value T="H" S="Count"/>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">0</Count>
+          <Value T="H" S="Count"/>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">0</Count>
+          <Value T="H" S="Count"/>
+      	</Element>
+      	<Element>
+          <Count T="I" S="4">46</Count>
+          <Value T="H" S="Count">0000000015f3a97abbe0c243a6c2a406c292e8a5010001000000a5187b6fbcdcea1ed03c56570000000000180000</Value>
+      	</Element>
+      </ValueList>
+    </Element>
+    <Element C="FolderType=ServerError">
+      <FolderType/>
+      <Marker T="I" S="4" D="STREAM_MARKER">IncrSyncStateBegin</Marker>
+    </Element>
+    <Element C="FolderType=ServerError">
+      <Type T="I" S="2" D="DATA_TYP">I4</Type>
+      <PropertyId T="I" S="2" D="PID">IdsetGiven</PropertyId>
+      <Count T="I" S="4">30</Count>
+      <Value T="H" S="Count">01000000a5187b6fbcdcea1ed03c5657050000000000520a1752191d5000</Value>
+    </Element>
+    <Element C="FolderType=ServerError">
+      <Type T="I" S="2" D="DATA_TYP">H</Type>
+      <PropertyId T="I" S="2" D="PID">TagCnsetSeen</PropertyId>
+      <Count T="I" S="4">30</Count>
+      <Value T="H" S="Count">01000000a5187b6fbcdcea1ed03c56575200000000000180000000006500</Value>
+    </Element>
+    <Element C="FolderType=SyncProblems">
+      <Marker T="I" S="4" D="STREAM_MARKER">IncrSyncStateEnd</Marker>
+    </Element>
+    <Element C="FolderType=SyncProblems">
+      <Marker T="I" S="4" D="STREAM_MARKER">IncrSyncEnd</Marker>
+    </Element>
+  </Folder>  
+
+</syncgw>
