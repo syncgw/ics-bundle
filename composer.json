@@ -1,5 +1,6 @@
 {
 	"name" : "syncgw/ics-bundle",
+	"description" : "sync•gw ICS (Bulk Data Transfer Protocol) bundle.",
 	"license" : "LGPL-3.0-or-later",
 	"homepage" : "https://github.com/syncgw/file-bundle",
 	"authors" : [{
