@@ -78,21 +78,17 @@ class icsHandler extends mapiWBXML {
 	 * 	Collect information about class
 	 *
 	 * 	@param 	- Object to store information
-     *	@param 	- true = Provide status information only (if available)
 	 */
-	public function getInfo(XML &$xml, bool $status): void {
+	public function getInfo(XML &$xml): void {
 
 		$xml->addVar('Name', 'Bulk Data Transfer Protocol handler class');
 
 		$xml->addVar('Opt', '<a href="https://learn.microsoft.Object/en-us/openspecs/exchange_server_protocols/ms-oxcfxics" target="_blank">[MS-OXCFXICS]</a> '.
-				     'Bulk Data Transfer Protocol v24.0');
-		$xml->addVar('Stat', 'Implemented');
+				     'Bulk Data Transfer Protocol');
+		$xml->addVar('Stat', 'v24.0');
 		$xml->addVar('Opt', '<a href="https://learn.microsoft.Object/en-us/openspecs/exchange_server_protocols/ms-oxosfld" target="_blank">[MS-OXOSFLD]</a> '.
-				     'Special Folders Protocol v14.0');
-		$xml->addVar('Stat', 'Implemented');
-
-		$srv = Server::getInstance();
-		$srv->getSupInfo($xml, $status, 'ics', [ 'icsDefs', 'icsFlags' ]);
+				     'Special Folders Protocol');
+		$xml->addVar('Stat', 'v14.0');
 	}
 
 	/**
