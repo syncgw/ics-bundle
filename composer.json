@@ -1,18 +1,18 @@
 {
 	"name" : "syncgw/ics-bundle",
-	"description" : "sync•gw ICS (Bulk Data Transfer Protocol) bundle.",
+	"description" : "sync*gw ICS (Bulk Data Transfer Protocol) bundle.",
 	"license" : "LGPL-3.0-or-later",
-    "repositories" : [{
-            "type" : "composer",
-            "url" : "https://repo.packagist.org"
-    	}
-    ],
+	"repositories" : [{
+			"type" : "composer",
+			"url" : "https://repo.packagist.org"
+		}
+	],
 	"type" : "syncgw-bundle",
 	"homepage" : "https://github.com/syncgw/ics-bundle",
 	"authors" : [{
 			"name" : "Florian Däumling",
 			"homepage" : "https://github.com/toteph42",
-            "role" : "Developer"
+			"role" : "Developer"
 		}
 	],
 	"funding" : [{
