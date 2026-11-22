@@ -3,7 +3,7 @@
 	"type" : "syncgw-bundle",
 	"description" : "sync*gw ICS (Bulk Data Transfer Protocol) bundle.",
 	"homepage" : "https://github.com/syncgw/ics-bundle",
-	"license" : "https://www.gnu.org/licenses/gpl-3.0.en.html",
+	"license" : "GPL-3.0-or-later",
 	"repositories" : [{
 			"type" : "composer",
 			"url" : "https://repo.packagist.org"
@@ -11,7 +11,8 @@
 	],
 	"authors" : [{
 			"name" : "Florian Daeumling",
-			"role" : "Author"
+			"role" : "Author",
+			"email" : "syncgw@wb28.de"
 		}
 	],
 	"funding" : [{
@@ -20,9 +21,8 @@
 		}
 	],
 	"support" : {
-		"issues" : "https://github.com/syncgw/syncgw/issues",
-		"docs" : "https://github.com/syncgw/ics-bundle",
-		"email" : "syncgw@wb28.de"
+		"issues" : "https://github.com/syncgw/ics-bundle/issues",
+		"docs" : "https://github.com/syncgw/doc-bundle"
 	},
 	"require" : {
 		"php" : ">=8.1",
